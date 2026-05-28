@@ -1,0 +1,129 @@
+Secure Wireless and Mobile Network Environment
+Introduction
+This project demonstrates a secure wireless and mobile network environment implemented using Cisco Packet Tracer. The network applies multiple layers of security including VLAN segmentation, DHCP management, ACL filtering, VPN tunneling, centralized AAA authentication with RADIUS, and wireless encryption.
+The purpose of the project is to protect wireless and mobile communications while ensuring secure connectivity between headquarters and remote office networks.
+Project Objectives
+·	Implement secure VLAN segmentation
+·	Configure inter-VLAN routing
+·	Deploy DHCP services
+·	Apply ACL-based traffic filtering
+·	Establish site-to-site VPN communication
+·	Configure centralized AAA authentication using RADIUS
+·	Secure wireless communication using WPA2/WPA3
+·	Demonstrate enterprise wireless network security concepts
+Network Segmentation
+The network is divided into multiple logical zones:
+VLAN	Zone	Purpose
+VLAN 10	Management Zone	WLC and RADIUS Server
+VLAN 20	Staff Zone	Employee devices
+VLAN 30	Guest Zone	Guest users
+Office Network	Remote Zone	Branch office network
+Security Benefits
+·	Prevents unauthorized lateral movement
+·	Isolates sensitive infrastructure
+·	Restricts access between user groups
+·	Improves overall network security
+VLAN Configuration
+VLANs were configured on the switch to separate network traffic.
+Configured VLANs
+·	VLAN 10 → Management
+·	VLAN 20 → Staff
+·	VLAN 30 → Guest
+Trunk Port
+A trunk link was configured between the switch and Router0 to allow inter-VLAN communication.
+Inter-VLAN Routing
+Router-on-a-Stick configuration was implemented using subinterfaces on Router0.
+Subinterfaces
+·	Gig0/0.10
+·	Gig0/0.20
+·	Gig0/0.30
+Each subinterface uses IEEE 802.1Q encapsulation to route traffic between VLANs.
+DHCP Configuration
+DHCP services were configured to provide automatic IP addressing.
+DHCP Pools
+·	Management Pool
+·	Staff Pool
+·	Guest Pool
+·	Office Pool
+Features
+·	Reserved IP addresses for infrastructure devices
+·	Separate address pools for each VLAN
+·	DNS and domain configuration
+Access Control Lists (ACLs)
+ACLs were implemented to control traffic between network segments.
+ACL Policies
+·	Guest VLAN cannot access Management VLAN
+·	Guest VLAN cannot access Staff VLAN
+·	Only authorized traffic is permitted
+Security Purpose
+ACLs act as an internal firewall that protects sensitive resources from unauthorized access.
+Site-to-Site VPN
+An IPsec VPN tunnel was configured between Router0 and Router1 to securely connect the headquarters and branch office.
+VPN Features
+·	AES Encryption
+·	SHA Hashing
+·	Pre-shared Key Authentication
+·	Secure Tunneling
+Security Benefits
+·	Protects data confidentiality
+·	Ensures data integrity
+·	Secures communication across untrusted networks
+AAA and RADIUS Authentication
+Centralized authentication was implemented using a RADIUS server.
+Features
+·	Centralized user management
+·	Secure login authentication
+·	Shared secret authentication
+·	Wireless enterprise authentication
+Example Users
+·	manager
+·	cisco
+Wireless Security
+Wireless networks were protected using WPA2/WPA3 security mechanisms.
+Benefits
+·	Strong encryption
+·	Protection against unauthorized access
+·	Secure wireless communication
+Wireless Intrusion Detection System (WIDS)
+The project concept includes WIDS for monitoring wireless threats.
+WIDS Functions
+·	Rogue access point detection
+·	Wireless attack monitoring
+·	Evil Twin detection
+Note: Cisco Packet Tracer has limited support for WIDS implementation.
+Network Devices Used
+·	Cisco Routers
+·	Cisco Switches
+·	Wireless LAN Controller (WLC)
+·	RADIUS Server
+·	Wireless Access Points
+·	PCs and Mobile Devices
+Files Included
+·	configration.lab.pkt → Cisco Packet Tracer project file
+·	documentation.doc → Project documentation
+How to Run the Project
+1.	Open Cisco Packet Tracer
+2.	Load the .pkt file
+3.	Start simulation mode
+4.	Verify:
+o	VLAN communication
+o	DHCP functionality
+o	ACL restrictions
+o	VPN connectivity
+o	Wireless authentication
+Learning Outcomes
+This project demonstrates practical knowledge in:
+·	Network segmentation
+·	Wireless network security
+·	VPN implementation
+·	DHCP configuration
+·	ACL deployment
+·	AAA authentication
+·	Cisco network administration
+Conclusion
+This project successfully demonstrates a secure wireless and mobile network architecture using layered security techniques. By combining VLAN segmentation, ACL enforcement, VPN tunneling, centralized AAA authentication, and wireless encryption, the network achieves improved confidentiality, integrity, and availability.
+Author
+Abirham Awoke 
+License
+This project is for educational purposes only.
+
